@@ -1,0 +1,56 @@
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: Helvetica, 'Gotham', sans-serif;
+    font-weight: 300;
+    letter-spacing: 3px;
+    font-weight: light;
+    font-size: 56px;
+    padding: 20px;
+}
+
+h1 {
+    background-color: white;
+    margin: 50px 20px;
+    display: inline-block;
+    border-radius: 40px;
+    color: black;
+    padding: 20px 30px 20px 20px;
+}
+
+h1:before {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 50px solid white;
+    content: '';
+    position: absolute;
+    margin: -59px 0px 0px -8px;
+}
+
+h1:after {
+    content: '';
+    width: 10px;
+    height: 106px;
+    background-color: red;
+    position: absolute;
+    margin: initial;
+    z-index: 20;
+    margin-top: 12px;
+    animation: blink-animation 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+
+frames blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
+@-webkit-keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
